@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* hero */
+
+#header{
+    width: 100%;
+    height: 100vh;
+    position: relative;  
+}
+
+.container{
+    padding: 0;
+    position: relative;  
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+.container nav h1{
+    font-size: 36px;
+    font-weight: 800;
+    cursor: pointer;
+
+}
+
+.logo{
+    width: 60px;
+    margin-top: -20px;
+    margin-left: 20px;
+    border-radius: 2px;
+}
+
+.bg {
+    height: 100vh;        
+    width: 100%;          
+    object-fit: cover;    
+    position: absolute;   
+    right: 0;             
+    z-index: -1;
+    margin-top: -75px;          
+}
+
+
+nav > ul > li { 
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{  
+    content: '';
+    width: 0;   
+    height: 3px;
+    background: #a9b6be;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{  
+    width: 100%;
+}
+
+nav ul li:not(:last-child) { 
+    margin-right: 30px; 
+}
+
+nav ul li:nth-child(4) { 
+    font-weight: bold;
+}
+
+.hero-text{
+    margin-top: 200px;
+}
+
+.hero-text h2{
+    font-size: 65px;
+    font-weight: 700;
+}
+
+.hero-text p{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+/* About */
+
+#gallery {
+    padding: 2rem;
+    position: relative;
+}
+
+.gallery-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.gallery-container {
+    display: flex;
+    overflow: hidden; /* Hide the scrollbar */
+    gap: 15px;
+    padding: 10px;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 350px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 260px;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    border: 2px solid hsl(240, 56%, 69%);
+    border-radius: 10px;
+}
+
+.gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.3s;
+}
+
+.gallery-arrow:hover {
+    color: white;
+    background: #898282ad;
+    border-radius: 50%;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+
+/* Email review */
+
+#review {
+    padding: 30px 50px;
+    border: 1px solid hsla(0, 0%, 50%, 0.516);
+    margin-bottom: 20px;
+}
+
+#reviewForm {
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    gap: 20px; /* Add space between the form groups */
+}
+
+.review-category {
+    display: flex; /* Display categories in a row */
+    justify-content: space-between; /* Space out the rating and review */
+}
+
+.rating,
+.review {
+    flex: 1; /* Allow both elements to take equal space */
+    margin-right: 20px; /* Space between rating and review */
+}
+
+.rating:last-child, .review:last-child {
+    margin-right: 0; /* Remove margin for the last item */
+}
+
+.form-select {
+    width: 400px; /* Full width */
+    padding: 10px; /* Padding for comfort */
+    background: hsla(0, 14%, 84%, 0.545);
+    color: black;
+    cursor: pointer;
+}
+
+.form-control {
+    width: 100%; /* Full width */
+    height: 60px; /* Fixed height for textarea */
+    background: hsla(0, 1%, 28%, 0.545);
+    /* line-height: 50px; */
+    color: white;
+}
+
+.btn {
+    align-self: center; /* Center the submit button */
+    padding: 10px 20px; /* Button padding */
+    margin-top: 20px;
+    background: rgb(104, 99, 99);
+    border: 1px solid white;
+}
+
+.btn:hover{
+    background: #6863637a;
+    border: 2px solid white;
+}
+
+/* ================ Footer ================== */
+
+#footer{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.copyright-text{
+    padding-left: 20px;
+    margin-top: 20px;
+    color: gray;
+    font-size: 14px;
+}
+
+.footer-icons{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-icons img{
+    width: 30px;
+    cursor: pointer;
+}
+
+a[target="_blank"]{ /* Attribute selectors */
+    transition: 0.3s;
+}
+
+a[target="_blank"]:hover{ /* Attribute selectors */
+    transform: scale(1.1);
+    transform: translateY(-20%)
+}
+
+.contact-details{
+    display: block;
+    color: gray;
+}
+
+.contact-details-right a{
+    text-decoration: none;
+    color: gray;
+}
+
+.contact-details-right a:hover{
+    color: white;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    /* General Body Adjustments */
+    body {
+        width: 100%;
+    }
+
+    /* Header */
+    #header {
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    /* Navbar */
+    nav {
+        flex-direction: column; /* Stack the navbar items */
+        align-items: flex-start;
+    }
+
+    .container nav h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+
+    nav > ul {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline; /* Stack navigation items vertically */
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Smaller font size */
+    }
+
+    .logo {
+        width: 50px; /* Adjust logo size */
+        margin-left: 0;
+    }
+
+    /* Hero Text */
+    .hero-text {
+        margin-top: 100px; /* Reduce top margin */
+        text-align: center; /* Center the text */
+    }
+
+    .hero-text h2 {
+        font-size: 40px; /* Reduce font size */
+    }
+
+    .hero-text p {
+        font-size: 18px; /* Reduce font size */
+    }
+
+    /* Gallery Section */
+    .gallery-container {
+        flex-direction: column; /* Stack gallery items */
+        gap: 10px; /* Reduce gap */
+        margin-left: 30px;
+    }
+
+    .card {
+        width: 100%; /* Make gallery cards full-width */
+        margin-right: 15px;
+    }
+
+    .card img {
+        height: 200px; /* Adjust image height */
+    }
+
+    /* Email Review Section */
+    #review {
+        padding: 20px 30px; /* Reduce padding */
+        margin-bottom: 15px;
+        padding-top: 700px;
+        /* margin-top: 700px; */
+        /* padding: 50px; */
+    }
+
+    .review-category {
+        flex-direction: column; /* Stack rating and review vertically */
+    }
+
+    .form-select {
+        width: 50%; /* Full width */
+    }
+
+    .form-control {
+        height: 50px; /* Adjust height */
+        width: 80%;
+    }
+
+    .right-arrow, .left-arrow{
+        display: none;
+    }
+
+    /* Footer */
+    #footer {
+        padding-top: 10px;
+    }
+
+    .copyright-text {
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .footer-icons img {
+        width: 25px; /* Adjust icon size */
+    }
+
+    .contact-details{
+        padding: 10px 30px;
+    }
+}
