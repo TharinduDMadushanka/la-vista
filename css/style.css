@@ -347,7 +347,7 @@ a[target="_blank"]:hover{ /* Attribute selectors */
 
     .card {
         width: 100%; /* Make gallery cards full-width */
-        margin-right: 15px;
+        margin-right: 14px;
     }
 
     .card img {
